@@ -35,7 +35,7 @@ dd01a35078f040ca984cdd349f18d0b67e486c35 Update CHANGELOG.md<br>
 <br>
 
 ## Задание 5. Найдите коммит в котором была создана функция `func providerSource`, ее определение в коде выглядит так `func providerSource(...)` (вместо троеточия перечислены аргументы).
-### *git log --oneline -G'func providerSource(.*)'*
+### *git log --oneline -G'func providerSource(.\*)'*
 8c928e8358 main: Consult local directories as potential mirrors of providers
 <br>
 
