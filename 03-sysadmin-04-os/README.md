@@ -46,9 +46,6 @@ sudo systemctl status node_exporter.service
 ![MarkDown](img/1.png)
 
 ```
-sudo systemctl stop node_exporter.service
-sudo systemctl status node_exporter.service
-
 sudo systemctl start node_exporter.service
 sudo systemctl status node_exporter.service
 ```
