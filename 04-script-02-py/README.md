@@ -105,41 +105,28 @@ for result in result_os.split('\n'):
 Также должна быть реализована возможность проверки текущего IP сервиса c его IP из предыдущей проверки. Если проверка будет провалена — оповестить об этом в стандартный вывод сообщением: [ERROR] <URL сервиса> IP mismatch: <старый IP> <Новый IP>. Будем считать, что наша разработка реализовала сервисы: `drive.google.com`, `mail.google.com`, `google.com`.
 
 ### Решение
-```
-echo "{}" > service-dns.json
-```
 ```python
 #!/usr/bin/env python3
 
 import os
 import sys
-import time
 import socket
-import json
+import time
 
-service = ["drive.google.com", "mail.google.com", "google.com"]
-ip = []
+dict_service = {"drive.google.com": "0", "mail.google.com": "0", "google.com": "0"}
 
 while True:
-    with open('service-dns.json') as r:
-        data = json.load(r)
+    for i in dict_service.keys():
+        oldIP = dict_service[i]
+        newIP = socket.gethostbyname_ex(i)[2]
 
-    for s in service:
-        ip.append(socket.gethostbyname(s))
-
-    pairs = dict(zip(service, ip))
-
-    for key in data:
-        oldip = data[key]
-        newip = pairs[key]
-        if (oldip != newip):
-            print(f'[ERROR] {key} IP mismatch: {oldip} {newip}')
+        if oldIP != newIP and oldIP != "0":
+            print(f'[ERROR] {i} IP mismatch: {oldIP} {newIP}')
         else:
-            print(f'{key} - {newip}')
-
-    with open('service-dns.json', 'w') as w:
-        json.dump(pairs, w)
-    time.sleep(5)
+            print(f'{i} - {newIP}')
+            dict_service[i] = newIP
+    print('\n')
+    time.sleep(2)
 ```
 
 ![MarkDown](img/4.png)
