@@ -88,14 +88,14 @@ ansible --version
 Воспроизведите практическую часть лекции самостоятельно.
 - Создайте виртуальную машину.
 - Зайдите внутрь ВМ, убедитесь, что Docker установлен с помощью команды `docker ps`
-
+<br>
 
 ### Т.к. задания выполнялись на Windows 10 + WSL необходимы были дополнительные манипуляции
 ```
 cd /mnt/c/Users/admin/Desktop/05-virt-02-iaac/src/vagrant/
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/admin/Desktop/05-virt-02-iaac/src/"
 ```
-Создать файл **/etc/wsl.conf** со следующим содержимым и перезапустить WSL:
+Необходимо создать файл **/etc/wsl.conf** со следующим содержимым и перезапустить WSL, чтобы не было ошибок в Ansible:
 ```
 # Enable extra metadata options by default
 [automount]
@@ -104,7 +104,7 @@ root = /mnt/
 options = "metadata,umask=77,fmask=11"
 mountFsTab = false
 ```
-В файле **./ansible/inventory** изменен IP с 127.0.0.1 на 172.22.96.1
+В файле **./ansible/inventory** изменить IP с 127.0.0.1 на 172.22.96.1
 ```
 vagrant box add bento/ubuntu-20.04 "/mnt/c/Users/admin/Desktop/05-virt-02-iaac/src/vagrant/3a63bfcc-1339-4c83-abb1-7badc1fd574e"
 vagrant plugin install virtualbox_WSL2 --plugin-clean-sources --plugin-source https://rubygems.org
