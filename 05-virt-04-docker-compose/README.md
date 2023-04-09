@@ -30,7 +30,9 @@ packer build centos-7-base.json
 yc compute image list
 ```
 ![MarkDown](img/3.png)
+
 ![MarkDown](img/4.png)
+<br>
 
 ## Задание 2
 **2.1.** Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.        
@@ -56,6 +58,7 @@ terraform apply
 ![MarkDown](img/6.png)
 
 ![MarkDown](img/7.png)
+<br>
 
 ## Задание 3
 С помощью Ansible и Docker Compose разверните на виртуальной машине из предыдущего задания систему мониторинга на основе Prometheus/Grafana.
@@ -74,7 +77,7 @@ ssh root@51.250.0.6
 docker ps
 ```
 ![MarkDown](img/9.png)
-
+<br>
 
 ## Задание 4
 1. Откройте веб-браузер, зайдите на страницу http://<внешний_ip_адрес_вашей_ВМ>:3000.
