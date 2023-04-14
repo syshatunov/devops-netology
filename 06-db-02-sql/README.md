@@ -190,7 +190,7 @@ pg_dump -U netology_user -d test_db > /var/lib/postgresql/backup/test_db.sql
 docker compose down
 ```
 
-Внес правки в **docker-compose.yaml**:
+Обновлённый **docker-compose.yaml**:
 ```
 version: "3.9"
 services:
