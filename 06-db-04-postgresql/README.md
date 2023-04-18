@@ -89,7 +89,7 @@ SELECT * FROM orders_2;
 <br>
 
 ## Задание 4
-### Используя утилиту `pg_dump`, создайте бекап БД `test_database`.
+### Используя утилиту `pg_dump`, создал бекап БД `test_database`.
 ```
 pg_dump -h localhost -U postgres -d test_database > /var/lib/postgresql/backup/test_database_dump.sql
 ```
