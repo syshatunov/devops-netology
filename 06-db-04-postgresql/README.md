@@ -95,8 +95,9 @@ pg_dump -h localhost -U postgres -d test_database > /var/lib/postgresql/backup/t
 ```
 
 ### Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
-Можно добавить индекс для столбца `title`.
+Можно использовать уникальные ограничения (это отдельное поле или комбинация полей, которые однозначно определяют запись):
 ```
-CREATE INDEX ON orders ((lower(title)));
+ALTER TABLE orders_1 ADD CONSTRAINT orders_1_unique UNIQUE (title);
+ALTER TABLE orders_2 ADD CONSTRAINT orders_2_unique UNIQUE (title);
 ```
 <br>
