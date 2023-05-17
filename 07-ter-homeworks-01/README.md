@@ -47,7 +47,9 @@ cat terraform.tfstate
 terraform validate
 ```
 ![MarkDown](img/9.png)
+
 ![MarkDown](img/10.png)
+
 ![MarkDown](img/11.png)
 
 #### Получил две ошибки, а в процессе правок еще две которые говорят о том, что:
@@ -59,6 +61,7 @@ terraform validate
 
 #### Исправил:
 ![MarkDown](img/12.png)
+
 ![MarkDown](img/13.png)
 
 ### 5. Выполнил код. В качестве ответа прикладываю вывод команды ```docker ps```
