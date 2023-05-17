@@ -11,14 +11,14 @@ terraform --version
 ### Скачал на свой ПК [git репозиторий](https://github.com/netology-code/ter-homeworks).
 ![MarkDown](img/2.png)
 
-### Убедитесь, что в вашей ОС установлен docker.
+### Убедился, что в моей ОС установлен docker.
 ```
 docker -v
 ```
 ![MarkDown](img/3.png)
 
 ## Задание 1
-### 1. Перешел в каталог [**src**](https://github.com/netology-code/ter-homeworks/tree/main/01/src). Скачал все необходимые зависимости, использованные в проекте.
+### 1. Перешёл в каталог [**src**](https://github.com/netology-code/ter-homeworks/tree/main/01/src). Скачал все необходимые зависимости, использованные в проекте.
 ```
 terraform init
 ```
@@ -37,7 +37,9 @@ terraform apply
 cat terraform.tfstate
 ```
 ![MarkDown](img/6.png)
+
 ![MarkDown](img/7.png)
+
 ![MarkDown](img/8.png)
 
 ### 4. Раскомментировал блок кода, примерно расположенный на строчках 24-37 файла **main.tf**.
