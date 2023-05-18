@@ -16,6 +16,7 @@
 ### 1. Ознакомился с [документацией к **security-groups** в Yandex Cloud](https://cloud.yandex.ru/docs/vpc/concepts/security-groups?from=int-console-help-center-or-nav).
 ### 2. Запросил и получил **preview доступ** к данному функционалу в ЛК Yandex Cloud.<br><br>
 ***https://console.cloud.yandex.ru/folders/<ваш folder_id>/vpc/security-groups***.
+
 ![MarkDown](img/3.png)
 <br>
 
@@ -34,13 +35,14 @@ ssh-keygen -t ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
-### 4. Инициализировал проект, выполнил код. Исправил возникшую ошибку. Ответьте в чем заключается ее суть?
+### 4. Инициализировал проект, выполнил код. Исправил возникшую ошибку. Ответил в чем заключается ее суть.
 ```
 terraform init
 terraform plan
 terraform apply
 ```
 ![MarkDown](img/4.png)
+
 При выполнении кода получил ошибку, говорящую о том, что для платформы **standard-v1** доступны для использования только 2 или 4 ядра, а ну нас указано 1 ядро. Исправил на 2.
 ```
 terraform destroy
