@@ -290,7 +290,6 @@ ${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]}
 %{~ endfor ~}
 ```
 
-
 ### 2. Выполнил код.
 ![MarkDown](img/7.png)
 #### Сгенерированный файл hosts.cfg:
