@@ -1,0 +1,14 @@
+version: "3.6"
+
+services:
+  clickhouse:
+    image: centos:7
+    container_name: clickhouse
+    command: tail -f /dev/null
+    ports:
+      - 9000:9000
+  vector:
+    image: pycontribs/ubuntu:latest
+    container_name: vector
+    command: tail -f /dev/null
+    
